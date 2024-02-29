@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookShelves</title>
+</head>
+<body>
+    <form name="f1" method="post" action="/save">
+    <table border="3" bordercolor="red" width="60%" cellspacing="0" cellpadding="20" align="center">
+        <tr>
+            <th colspan="4"><h3>BookShelves</h3></th>
+        </tr>
+        <tr>
+            <td><input type="text" name="sub" placeholder="Book Name"></td>
+            <td><input type="text" name="desc" placeholder="Description"></td>
+            <td colspan="2"><input type="submit" name="add" value="Add"></td>
+        </tr>
+        <% 
+        data.forEach((e)=>{
+            %>
+            <tr>
+                <td><%=e.sub%></td>
+                <td><%=e.desc%></td>
+                <td><a href="/edit?id=<%=e._id%>"><i class="fa fa-edit"></i></a></td>
+                <td><a href="/del?id=<%=e._id%>"><i class="fa fa-trash"></i></a></td>
+            </tr>
+            <%
+        })
+        %>
+    </table>
+    </form>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <form name="f1" method="post" action="/update" >
+        <input type="hidden" name="code" value="<%=data._id%>">
+        <table border="1"width="50%"cellspacing="3" cellpadding="10" align="center">
+            <tr>
+                <td colspan="4" align="center">TO DO LIST</td>
+            </tr>
+            <tr>
+                <td><input type="text" name="sub" value="<%=data.sub%>"></td>
+                <td><input type="text" name="desc" size="52%" value="<%=data.desc%>"></td>
+                <td colspan="2"><input type="submit" value="UPDATE" ></td>
+            </tr>
+          
+        </table>
+    </form>
+</body>
+</html>
